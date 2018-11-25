@@ -1,0 +1,31 @@
+*** SPICE deck for cell diff_lay{sch} from library differntial
+*** Created on Sun Nov 25, 2018 18:47:35
+*** Last revised on Sun Nov 25, 2018 19:07:08
+*** Written on Sun Nov 25, 2018 19:08:00 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: diff_lay{sch}
+Mnmos@0 net@1 vin1 net@6 gnd nmos L=0.999U W=162.3U
+Mnmos@1 net@6 vin2 vout gnd nmos L=0.999U W=162.3U
+Mnmos@2 net@6 net@29 vss gnd nmos L=0.999U W=1.5U
+Mnmos@3 vss net@29 net@29 gnd nmos L=0.999U W=1.5U
+Mpmos@0 net@1 net@1 vdd vdd pmos L=0.999U W=14.25U
+Mpmos@1 vdd net@1 vout vdd pmos L=0.999U W=14.25U
+IDCCurren@0 vdd net@29 DC 45uA
+
+* Spice Code nodes in cell cell 'diff_lay{sch}'
+vdd vdd 0 dc 1.8
+vss vss 0 dc -1.8
+*vin1 vin1 0 dc 1.8
+*.dc vin1 -1.8 1.8 0.1
+*vin1 vin1 0 sin(0.7 0.5m 1k)
+*vin2 vin2 0 dc 0.7
+*.tran 0 5m
+vin1 vin1 0 ac sin sin(0.6 0.5m 1k)
+vin2 vin2 0 dc 0.6
+.ac DEC 100 100 10G
+.include C:\ELECTRIC\C5_models.txt
+.END

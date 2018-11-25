@@ -1,0 +1,84 @@
+# header information:
+Hcd_amplifier|9.07
+
+# Views:
+Vlayout|lay
+Vschematic|sch
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D300.0
+Tschematic|CapacitanceParasiticForArcINschematic()D0.12|EdgeCapacitanceParasiticForArcINschematic()D0.11|ResistanceParasiticForArcINschematic()D1.0
+
+# Cell cd_layout;1{lay}
+Ccd_layout;1{lay}||mocmos|1543150623997|1543151522815||DRC_last_good_drc_area_date()G1543151524846|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1543151524846
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-N-Active-Con|contact@2||-5|2.5|15|||
+NMetal-1-N-Active-Con|contact@3||-5|29.5|15|||
+NMetal-1-N-Active-Con|contact@4||-1|-46|61|||
+NMetal-1-N-Active-Con|contact@5||-1|-67.5|61|||
+NMetal-1-Polysilicon-1-Con|contact@6||-78.5|-57||||
+NMetal-1-Polysilicon-1-Con|contact@7||-78|13||||
+NN-Transistor|nmos@0||-5|16|17|18|||SIM_spice_model(D5G1;X22;)Snmos
+NN-Transistor|nmos@1||-1|-56.5|63|11.4|||SIM_spice_model(D5G1;X42.5;)Snmos
+NMetal-1-Pin|pin@0||-108.5|-57||||
+NMetal-1-Pin|pin@1||-109.5|13||||
+NMetal-1-Pin|pin@2||-5|-21.5||||
+NMetal-1-Pin|pin@3||52.5|-21.5||||
+Ngeneric:Invisible-Pin|pin@4||-128.5|40.5|||||SIM_spice_card(D5G5;)S[vdd vdd 0 dc 5,vbias vbias 0 dc 0.8,vin vin 0 dc 5,.dc vin 0 5 0.1,*vin vin 0 sin(4 1 1k 0 0 0 50),*.tran 0 5m,*vin vin 0 ac sin sin(4 1 1k 0 0 0 50),*.ac DEC 100 100 10G,".include C:\\ELECTRIC\\C5_models.txt"]
+NMetal-1-P-Well-Con|substr@0||-5|41|15|||
+NMetal-1-N-Well-Con|well@1||-32|-92.5|15|15||
+AN-Active|net@0|||S2700|nmos@0|diff-top|-5|28.5|contact@3||-5|29.5
+AN-Active|net@1|||S2700|contact@2||-5|2.5|nmos@0|diff-bottom|-5|3
+AN-Active|net@2|||S900|contact@4||-1|-46|nmos@1|diff-top|-1|-47
+AN-Active|net@3|||S2700|contact@5||-1|-67.5|nmos@1|diff-bottom|-1|-66
+AMetal-1|net@4||16|JS900|substr@0||-5|41|contact@3||-5|29.5
+APolysilicon-1|net@7|||S1800|contact@7||-78|13|nmos@0|poly-left|-17|13
+APolysilicon-1|net@8|||S1800|contact@6||-78.5|-57|nmos@1|poly-left|-36|-57
+AMetal-1|net@9||1|S0|contact@6||-78.5|-57|pin@0||-108.5|-57
+AMetal-1|net@10||1|S0|contact@7||-78|13|pin@1||-109.5|13
+AMetal-1|net@11||16|IJS900|contact@2||-5|2.5|pin@2||-5|-21.5
+AMetal-1|net@12||16|IJS900|pin@2||-5|-21.5|contact@4||-5|-46
+AMetal-1|net@13||16|S1800|pin@2||-5|-21.5|pin@3||52.5|-21.5
+AMetal-1|net@14||1|S2700|well@1||-32|-92.5|contact@5||-32|-67.5
+Egnd||D5G2;|well@1||G
+Evbias||D5G2;|pin@0||I
+Evdd||D5G2;|substr@0||P
+Evin||D5G2;|pin@1||I
+Evout||D5G2;|pin@3||O
+X
+
+# Cell cs_schema;1{sch}
+Ccs_schema;1{sch}||schematic|1543141550543|1543150510776|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||-4.5|7.5||||
+NOff-Page|conn@1||15|3||||
+NOff-Page|conn@2||-5|-4||||
+NGround|gnd@0||7|-10.5||||
+NTransistor|nmos@0||5|-3|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S13.4|ATTR_width(D5G1;X0.5;Y-1;)S66|SIM_spice_model(D5G1;Y-8;)Snmos
+NTransistor|nmos@1||5|7|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S20|ATTR_width(D5G1;X0.5;Y-1;)S20|SIM_spice_model(D5G1;Y-5.5;)Snmos
+NWire_Pin|pin@0||6|-1||||
+NWire_Pin|pin@2||6|2.5||||
+NWire_Pin|pin@3||13|2.5||||
+NWire_Pin|pin@4||4|-4||||
+NWire_Pin|pin@5||3|7.5||||
+NWire_Pin|pin@6||3|7||||
+NWire_Pin|pin@7||7|2.5||||
+Ngeneric:Invisible-Pin|pin@8||-21.5|3.5|||||SIM_spice_card(D5G1;)S[vdd vdd 0 dc 5,vbias vbias 0 dc 0.8,*vin vin 0 dc 5,*.dc vin 0 5 0.1,*vin vin 0 sin(4 11k 0 0 0 50),*.tran 0 5m,vin vin 0 ac sin sin(4 1 1k 0 0 0 50),.ac DEC 100 100 10G,".include C:\\ELECTRIC\\C5_models.txt"]
+NPower|pwr@0||7|14.5||||
+Awire|net@1|||0|nmos@0|d|7|-1|pin@0||6|-1
+Awire|net@4|||900|nmos@0|s|7|-5|gnd@0||7|-8.5
+Awire|net@6|||900|pin@2||6|2.5|pin@0||6|-1
+Awire|net@7|||1800|pin@2||6|2.5|pin@3||13|2.5
+Awire|net@8|||900|conn@1|a|13|3|pin@3||13|2.5
+Awire|net@9|||1800|conn@2|y|-3|-4|pin@4||4|-4
+Awire|net@10|||900|nmos@0|g|4|-3|pin@4||4|-4
+Awire|net@11|||1800|conn@0|y|-2.5|7.5|pin@5||3|7.5
+Awire|net@14|||900|pin@5||3|7.5|pin@6||3|7
+Awire|net@15|||0|nmos@1|g|4|7|pin@6||3|7
+Awire|net@16|||900|nmos@1|s|7|5|pin@7||7|2.5
+Awire|net@17|||1800|pin@2||6|2.5|pin@7||7|2.5
+Awire|net@18|||900|pwr@0||7|14.5|nmos@1|d|7|9
+Evbias||D5G2;X-5.5;Y-1;|conn@2|a|I
+Evin||D5G2;|conn@0|y|I
+Evout||D5G2;|conn@1|y|O
+X

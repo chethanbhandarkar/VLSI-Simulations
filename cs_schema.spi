@@ -1,0 +1,24 @@
+*** SPICE deck for cell cs_schema{sch} from library cd_amplifier
+*** Created on Sun Nov 25, 2018 15:55:50
+*** Last revised on Sun Nov 25, 2018 18:25:10
+*** Written on Sun Nov 25, 2018 18:25:14 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: cs_schema{sch}
+Mnmos@0 vout vbias gnd gnd nmos L=4.02U W=19.8U
+Mnmos@1 vdd vin vout gnd nmos L=6U W=6U
+
+* Spice Code nodes in cell cell 'cs_schema{sch}'
+vdd vdd 0 dc 5
+vbias vbias 0 dc 0.8
+*vin vin 0 dc 5
+*.dc vin 0 5 0.1
+*vin vin 0 sin(4 11k 0 0 0 50)
+*.tran 0 5m
+vin vin 0 ac sin sin(4 1 1k 0 0 0 50)
+.ac DEC 100 100 10G
+.include C:\ELECTRIC\C5_models.txt
+.END

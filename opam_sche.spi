@@ -1,0 +1,33 @@
+*** SPICE deck for cell opam_sche{sch} from library opamp
+*** Created on Sun Nov 25, 2018 19:09:57
+*** Last revised on Sun Nov 25, 2018 19:15:37
+*** Written on Sun Nov 25, 2018 19:17:04 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: opam_sche{sch}
+Mnmos@0 net@0 vin1 net@30 gnd nmos L=0.999U W=162.3U
+Mnmos@1 net@30 vin2 net@7 gnd nmos L=0.999U W=162.3U
+Mnmos@2 net@30 net@6 vss gnd nmos L=0.999U W=1.5U
+Mnmos@3 vss net@6 net@6 gnd nmos L=0.999U W=1.5U
+Mnmos@4 vdd vout vout gnd pmos L=25.2U W=5.1U
+Mnmos@5 vout net@7 gnd gnd nmos L=2.1U W=20.1U
+Mpmos@0 net@0 net@0 vdd vdd pmos L=0.999U W=14.25U
+Mpmos@1 vdd net@0 net@7 vdd pmos L=0.999U W=14.25U
+IDCCurren@0 vdd net@6 DC 45uA
+
+* Spice Code nodes in cell cell 'opam_sche{sch}'
+vdd vdd 0 dc 1.8
+vss vss 0 dc -1.8
+*vin1 vin1 0 dc 1.8
+*.dc vin1 -1.8 1.8 0.1
+*vin1 vin1 0 sin(0.7 0.5m 1k)
+*vin2 vin2 0 dc 0.7
+*.tran 0 5m
+vin1 vin1 0 ac sin sin(0.7 0.5m 1k)
+vin2 vin2 0 dc 0.7
+.ac DEC 100 100 10G
+.include C:\ELECTRIC\C5_models.txt
+.END

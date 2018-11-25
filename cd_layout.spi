@@ -1,0 +1,112 @@
+*** SPICE deck for cell cd_layout{lay} from library cd_amplifier
+*** Created on Sun Nov 25, 2018 18:27:03
+*** Last revised on Sun Nov 25, 2018 18:42:02
+*** Written on Sun Nov 25, 2018 18:42:57 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+
+*** TOP LEVEL CELL: cd_layout{lay}
+Mnmos@0 vout vin#1nmos@0_poly-left vdd gnd nmos L=6U W=6U AS=19.8P AD=24.111P PS=30.6U PD=29.49U
+Mnmos@1 gnd vbias#1nmos@1_poly-left vout gnd nmos L=4.02U W=19.8U AS=24.111P AD=76.392P PS=29.49U PD=67.68U
+** Extracted Parasitic Capacitors ***
+C0 vout 0 28.936fF
+C1 vbias 0 3.471fF
+C2 vin 0 3.649fF
+C3 vin#1nmos@0_poly-left 0 0.192fF
+C4 vbias#1nmos@1_poly-left 0 0.178fF
+** Extracted Parasitic Resistors ***
+R0 vin vin##0 9.953
+C5 vin##0 0 0.192fF
+R1 vin##0 vin##1 9.953
+C6 vin##1 0 0.192fF
+R2 vin##1 vin##2 9.953
+C7 vin##2 0 0.192fF
+R3 vin##2 vin##3 9.953
+C8 vin##3 0 0.192fF
+R4 vin##3 vin##4 9.953
+C9 vin##4 0 0.192fF
+R5 vin##4 vin##5 9.953
+C10 vin##5 0 0.192fF
+R6 vin##5 vin##6 9.953
+C11 vin##6 0 0.192fF
+R7 vin##6 vin##7 9.953
+C12 vin##7 0 0.192fF
+R8 vin##7 vin##8 9.953
+C13 vin##8 0 0.192fF
+R9 vin##8 vin##9 9.953
+C14 vin##9 0 0.192fF
+R10 vin##9 vin##10 9.953
+C15 vin##10 0 0.192fF
+R11 vin##10 vin##11 9.953
+C16 vin##11 0 0.192fF
+R12 vin##11 vin##12 9.953
+C17 vin##12 0 0.192fF
+R13 vin##12 vin##13 9.953
+C18 vin##13 0 0.192fF
+R14 vin##13 vin##14 9.953
+C19 vin##14 0 0.192fF
+R15 vin##14 vin##15 9.953
+C20 vin##15 0 0.192fF
+R16 vin##15 vin##16 9.953
+C21 vin##16 0 0.192fF
+R17 vin##16 vin##17 9.953
+C22 vin##17 0 0.192fF
+R18 vin##17 vin#1nmos@0_poly-left 9.953
+R19 vbias vbias##0 9.411
+C23 vbias##0 0 0.178fF
+R20 vbias##0 vbias##1 9.411
+C24 vbias##1 0 0.178fF
+R21 vbias##1 vbias##2 9.411
+C25 vbias##2 0 0.178fF
+R22 vbias##2 vbias##3 9.411
+C26 vbias##3 0 0.178fF
+R23 vbias##3 vbias##4 9.411
+C27 vbias##4 0 0.178fF
+R24 vbias##4 vbias##5 9.411
+C28 vbias##5 0 0.178fF
+R25 vbias##5 vbias##6 9.411
+C29 vbias##6 0 0.178fF
+R26 vbias##6 vbias##7 9.411
+C30 vbias##7 0 0.178fF
+R27 vbias##7 vbias##8 9.411
+C31 vbias##8 0 0.178fF
+R28 vbias##8 vbias##9 9.411
+C32 vbias##9 0 0.178fF
+R29 vbias##9 vbias##10 9.411
+C33 vbias##10 0 0.178fF
+R30 vbias##10 vbias##11 9.411
+C34 vbias##11 0 0.178fF
+R31 vbias##11 vbias##12 9.411
+C35 vbias##12 0 0.178fF
+R32 vbias##12 vbias#1nmos@1_poly-left 9.411
+
+* Spice Code nodes in cell cell 'cd_layout{lay}'
+vdd vdd 0 dc 5
+vbias vbias 0 dc 0.8
+*vin vin 0 dc 5
+*.dc vin 0 5 0.1
+*vin vin 0 sin(4 1 1k 0 0 0 50)
+*.tran 0 5m
+vin vin 0 ac sin sin(4 1 1k 0 0 0 50)
+.ac DEC 100 100 10G
+.include C:\ELECTRIC\C5_models.txt
+.END
